@@ -5,4 +5,85 @@
       <BehatSettings />
     </behat_settings>
   </component>
+  <component name="PhpAnalysisConfiguration" call_tree_analysis_depth="0" />
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/appcode/vendor/composer" />
+      <path value="$PROJECT_DIR$/appcode/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/appcode/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/appcode/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive-helpers" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-stratigility" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive-fastroute" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-config-aggregator" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive-router" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-httphandlerrunner" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-escaper" />
+      <path value="$PROJECT_DIR$/appcode/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-component-installer" />
+      <path value="$PROJECT_DIR$/appcode/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-stdlib" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive-template" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive-twigrenderer" />
+      <path value="$PROJECT_DIR$/appcode/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/appcode/vendor/wshafer/swoole-expressive" />
+      <path value="$PROJECT_DIR$/appcode/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/appcode/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/appcode/vendor/psr/http-server-handler" />
+      <path value="$PROJECT_DIR$/appcode/vendor/psr/http-server-middleware" />
+      <path value="$PROJECT_DIR$/appcode/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/appcode/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/appcode/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/appcode/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/appcode/vendor/fig/http-message-util" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-servicemanager" />
+      <path value="$PROJECT_DIR$/appcode/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zfcampus/zf-composer-autoloading" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zfcampus/zf-development-mode" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive-tooling" />
+      <path value="$PROJECT_DIR$/appcode/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/appcode/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/appcode/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/cache" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/appcode/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
 </project>

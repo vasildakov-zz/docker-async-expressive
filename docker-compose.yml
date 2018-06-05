@@ -1,0 +1,65 @@
+version: '2'
+
+services:
+
+    nginx:
+        container_name: TmsNginx
+        build:
+            context: .
+            dockerfile: docker/nginx/Dockerfile
+        ports:
+            - "8088:80"
+            - "444:443"
+        volumes_from:
+            - appdata
+        environment:
+            VIRTUAL_HOST: "expressive.dev"
+            NGINX_CONF: "dev"
+        depends_on:
+            - php-fpm
+        links:
+            - "php-fpm:TmsPHP"
+
+    php-fpm:
+        container_name: TmsPHP
+        build:
+            context: .
+            dockerfile: docker/php/Dockerfile
+        volumes_from:
+            - appdata
+        depends_on:
+          - mysql
+          - beanstalkd
+          - appdata
+        links:
+            - "mysql:TmsMysql"
+            - "beanstalkd:TmsBeanstalkd"
+
+    appdata:
+        container_name: TmsApp
+        image: vasildakov/tms:latest
+        volumes:
+            - ./appcode:/var/www/html
+
+    mysql:
+        container_name: TmsMysql
+        image: mysql:8.0
+        environment:
+            MYSQL_ROOT_PASSWORD: '1'
+            MYSQL_USER: 'root'
+            MYSQL_PASSWORD: '1'
+            MYSQL_DATABASE: 'tms'
+        ports:
+            - "3306:3307"
+
+    redis:
+        container_name: TmsRedis
+        image: redis:3.2.0
+        ports:
+            - "6380:6379"
+
+    beanstalkd:
+        container_name: TmsBeanstalkd
+        image: schickling/beanstalkd
+        ports:
+            - "11300:11300"
