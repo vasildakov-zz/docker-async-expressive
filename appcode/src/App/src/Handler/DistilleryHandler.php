@@ -27,7 +27,10 @@ class DistilleryHandler implements RequestHandlerInterface
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
         $macallan = new Distillery(1, 'Macallan');
+        $macallan->setRegion('Highland');
+
         $ardbeg   = new Distillery(2, 'Ardbeg');
+        $ardbeg->setRegion('Islay');
 
         return new JsonResponse(
             [
