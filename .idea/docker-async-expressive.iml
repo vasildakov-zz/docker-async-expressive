@@ -2,24 +2,37 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/appcode/src/Infrastructure/src" isTestSource="false" packagePrefix="Infrastructure\" />
+      <sourceFolder url="file://$MODULE_DIR$/appcode/src/InfrastructureTest/src" isTestSource="true" packagePrefix="InfrastructureTest\" />
       <sourceFolder url="file://$MODULE_DIR$/appcode/src/App/src" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/appcode/test/AppTest" isTestSource="true" packagePrefix="AppTest\" />
+      <sourceFolder url="file://$MODULE_DIR$/appcode/src/DomainTest/src" isTestSource="true" packagePrefix="DomainTest\" />
       <sourceFolder url="file://$MODULE_DIR$/appcode/src/Domain/src" isTestSource="false" packagePrefix="Domain\" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/cache/adapter-common" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/cache/hierarchical-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/cache/redis-adapter" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/cache/tag-interop" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/container-interop/container-interop" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/annotations" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/collections" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/data-fixtures" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/orm" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/fig/http-message-util" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/nikic/fast-route" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/ocramius/package-versions" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/ocramius/proxy-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/phar-io/version" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/phpdocumentor/reflection-common" />
@@ -33,11 +46,15 @@
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/phpunit/php-token-stream" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/phpunit/phpunit-mock-objects" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/predis/predis" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/psr/http-server-handler" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/psr/http-server-middleware" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/comparator" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/diff" />
@@ -51,7 +68,9 @@
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/squizlabs/php_codesniffer" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/symfony/polyfill-ctype" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/webmozart/assert" />

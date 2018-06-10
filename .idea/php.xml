@@ -78,9 +78,25 @@
       <path value="$PROJECT_DIR$/appcode/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/appcode/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/appcode/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/appcode/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/appcode/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/appcode/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/appcode/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/appcode/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/appcode/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/appcode/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/appcode/vendor/cache/hierarchical-cache" />
+      <path value="$PROJECT_DIR$/appcode/vendor/cache/redis-adapter" />
+      <path value="$PROJECT_DIR$/appcode/vendor/cache/tag-interop" />
+      <path value="$PROJECT_DIR$/appcode/vendor/cache/adapter-common" />
+      <path value="$PROJECT_DIR$/appcode/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/appcode/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/migrations" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/appcode/vendor/autoload.php" />

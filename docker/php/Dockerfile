@@ -1,6 +1,11 @@
-FROM php:7.2-fpm-stretch
+FROM php:7.2-fpm
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Install redis
+RUN pecl install -o -f redis \
+	&&  rm -rf /tmp/pear \
+	&&  docker-php-ext-enable redis
 
 RUN \
     apt-get update -y && \
@@ -31,7 +36,11 @@ RUN \
     && docker-php-ext-install zip \
     && docker-php-ext-install xml
 
-# Enable and configure xdebug
+# xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug
 
+# swoole
 RUN pecl install swoole-2.1.1 && docker-php-ext-enable swoole
+
+# redis
+# RUN pecl install redis && docker-php-ext-enable redis
