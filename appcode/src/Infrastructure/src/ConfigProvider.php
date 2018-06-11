@@ -58,7 +58,7 @@ class ConfigProvider
 
 
                 // Commands/Symfony
-                //Symfony\Command\ImportFixturesCommand::class => Symfony\Command\ImportFixturesCommandFactory::class,
+                Doctrine\Command\ImportFixturesCommand::class => Doctrine\Command\ImportFixturesCommandFactory::class,
                 //Symfony\Command\DiagnosticsCommand::class => Symfony\Command\DiagnosticsCommandFactory::class,
                 //Symfony\Command\ClearCacheCommand::class => Symfony\Command\ClearCacheCommandFactory::class,
                 //Symfony\Command\ArchiveExpiredReservations::class => Symfony\Command\ArchiveExpiredReservationsFactory::class,

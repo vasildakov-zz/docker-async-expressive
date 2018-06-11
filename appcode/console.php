@@ -95,7 +95,7 @@ if (class_exists(\Doctrine\DBAL\Migrations\Version::class)) {
 
 // Add custom commands
 //$cli->add($container->get(\Infrastructure\Symfony\Command\DiagnosticsCommand::class));
-//$cli->add($container->get(\Infrastructure\Symfony\Command\ImportFixturesCommand::class));
+$cli->add($container->get(\Infrastructure\Doctrine\Command\ImportFixturesCommand::class));
 //$cli->add($container->get(\Infrastructure\Symfony\Command\ClearCacheCommand::class));
 //$cli->add($container->get(\Infrastructure\Symfony\Command\ArchiveExpiredReservations::class));
 //$cli->add($container->get(\Infrastructure\Symfony\Command\BenchmarkCommand::class));

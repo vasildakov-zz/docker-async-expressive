@@ -59,7 +59,7 @@ final class EntityManagerFactory
         } // @codeCoverageIgnoreEnd
 
         // Doctrine ORM yaml mapping
-        $driver = new \Doctrine\ORM\Mapping\Driver\YamlDriver('src/Infrastructure/src/Doctrine/Mapping');
+        $driver = new \Doctrine\ORM\Mapping\Driver\XmlDriver('src/Infrastructure/src/Doctrine/Mapping');
         $doctrine->setMetadataDriverImpl($driver);
 
         // Doctrine Cache

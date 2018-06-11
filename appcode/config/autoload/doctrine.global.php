@@ -30,7 +30,7 @@ return [
                 ],
             ],
             __NAMESPACE__ => [
-                'class' => \Doctrine\ORM\Mapping\Driver\YamlDriver::class,
+                'class' => \Doctrine\ORM\Mapping\Driver\XmlDriver::class,
                 'cache' => 'array',
                 'paths' => __DIR__ . '/../../src/Infrastructure/src/Doctrine/Mapping',
             ],
