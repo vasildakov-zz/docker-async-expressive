@@ -94,6 +94,12 @@
       <path value="$PROJECT_DIR$/appcode/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/appcode/vendor/ocramius/proxy-manager" />
       <path value="$PROJECT_DIR$/appcode/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-config" />
+      <path value="$PROJECT_DIR$/appcode/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/appcode/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive-hal" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-hydrator" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-paginator" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

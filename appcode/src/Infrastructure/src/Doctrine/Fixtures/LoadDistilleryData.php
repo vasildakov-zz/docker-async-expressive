@@ -7,6 +7,12 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Domain\Distillery;
 
+/**
+ * Class LoadDistilleryData
+ *
+ * @package    Infrastructure\Doctrine\Fixtures
+ * @author     Vasil Dakov <vasil.dakov@dunelm.com>
+ */
 class LoadDistilleryData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function getOrder()
@@ -16,9 +22,12 @@ class LoadDistilleryData extends AbstractFixture implements OrderedFixtureInterf
 
     public function load(ObjectManager $em)
     {
-        $distillery = new Distillery(1, 'Macallan');
-
-        $em->persist($distillery);
+        $reader = new \Zend\Config\Reader\Json();
+        $records   = $reader->fromFile('./data/fixtures/distillery.json');
+        foreach ($records as $record) {
+            $distillery = new Distillery($record['id'], $record['name']);
+            $em->persist($distillery);
+        }
         $em->flush();
     }
 

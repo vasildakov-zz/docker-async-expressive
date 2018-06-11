@@ -2,22 +2,47 @@
 
 namespace App\Handler;
 
-use Domain\Distillery;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\Query;
+use Fig\Http\Message\StatusCodeInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Diactoros\Response\JsonResponse;
+use Zend\Diactoros\Response\TextResponse;
+use Zend\Expressive\Hal\HalResource;
+use Zend\Expressive\Hal\Link;
+use Zend\Expressive\Hal\Renderer\JsonRenderer;
+
+use Zend\Expressive\Hal\HalResponseFactory;
+use Zend\Expressive\Hal\ResourceGenerator;
 
 /**
  * Class DistilleryHandler
  *
- * @package    App\Handler
- * @author     Vasil Dakov <vasil.dakov@dunelm.com>
+ * @see https://docs.zendframework.com/zend-expressive-hal/intro/
  */
 class DistilleryHandler implements RequestHandlerInterface
 {
-    public function __construct()
+    /**
+     * @var EntityManagerInterface
+     */
+    private $entityManager;
+
+    /**
+     * DistilleryHandler constructor.
+     * @param EntityManagerInterface $entityManager
+     */
+    public function __construct(
+        EntityManagerInterface $entityManager,
+        ResourceGenerator $resourceGenerator,
+        HalResponseFactory $responseFactory
+    )
     {
+        $this->entityManager = $entityManager;
+        $this->resourceGenerator = $resourceGenerator;
+        $this->responseFactory = $responseFactory;
     }
 
     /**
@@ -26,17 +51,30 @@ class DistilleryHandler implements RequestHandlerInterface
      */
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
-        $macallan = new Distillery(1, 'Macallan');
-        $macallan->setRegion('Highland');
+        /* $qb = $this->em->createQueryBuilder();
+        $results = $qb
+            ->select('d.id, d.name, d.description, d.status, d.founded')
+            ->from('Domain\\Distillery', 'd')
+            ->getQuery()
+            ->getResult(Query::HYDRATE_ARRAY);
 
-        $ardbeg   = new Distillery(2, 'Ardbeg');
-        $ardbeg->setRegion('Islay');
+        $collection = new ArrayCollection($results); */
 
-        return new JsonResponse(
-            [
-                $macallan->toArray(),
-                $ardbeg->toArray()
-            ]
+
+        $distillery = $this->entityManager->find('Domain\Distillery', 'cb0861ca-6d73-11e8-9223-0242ac190003');
+        $resource = new HalResource($distillery->toArray());
+        $resource = $resource->withLink(new Link('self'));
+
+        //$resource = $this->resourceGenerator->fromObject($distillery, $request);
+        //return $this->responseFactory->createResponse($request, $resource);
+
+        $renderer = new JsonRenderer();
+
+        return new TextResponse(
+            $renderer->render($resource),
+            StatusCodeInterface::STATUS_OK,
+            ['Content-Type' => 'application/hal+json']
         );
+
     }
 }

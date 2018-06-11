@@ -2,7 +2,6 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
 use Symfony\Component\Console\Application;
 
@@ -74,9 +73,6 @@ if (class_exists(\Doctrine\DBAL\Migrations\Version::class)) {
     if (class_exists(\Symfony\Component\Console\Helper\QuestionHelper::class)) {
         $helperSet->set(new \Symfony\Component\Console\Helper\QuestionHelper(), 'question');
     }
-    /* else {
-        $helperSet->set(new \Symfony\Component\Console\Helper\DialogHelper(), 'dialog');
-    } */
 
     $cli->addCommands(
         [
@@ -96,9 +92,6 @@ if (class_exists(\Doctrine\DBAL\Migrations\Version::class)) {
 // Add custom commands
 //$cli->add($container->get(\Infrastructure\Symfony\Command\DiagnosticsCommand::class));
 $cli->add($container->get(\Infrastructure\Doctrine\Command\ImportFixturesCommand::class));
-//$cli->add($container->get(\Infrastructure\Symfony\Command\ClearCacheCommand::class));
-//$cli->add($container->get(\Infrastructure\Symfony\Command\ArchiveExpiredReservations::class));
-//$cli->add($container->get(\Infrastructure\Symfony\Command\BenchmarkCommand::class));
 
 // Set helpers
 $helperSet = isset($helperSet) ? $helperSet : new \Symfony\Component\Console\Helper\HelperSet();

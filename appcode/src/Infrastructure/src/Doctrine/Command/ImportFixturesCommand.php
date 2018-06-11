@@ -44,12 +44,12 @@ class ImportFixturesCommand extends Command
     protected $executor;
 
     /**
-     * Constructor
+     * ImportFixturesCommand constructor.
      *
-     * @param EntityManager     $em
-     * @param Loader            $loader
-     * @param ORMExecutor       $executor
-     * @param ORMPurger         $purger
+     * @param EntityManager $em
+     * @param Loader $loader
+     * @param ORMExecutor $executor
+     * @param ORMPurger $purger
      */
     public function __construct(
         EntityManager $em,
