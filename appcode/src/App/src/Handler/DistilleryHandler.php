@@ -54,11 +54,13 @@ class DistilleryHandler implements RequestHandlerInterface
         $qb = $this->entityManager->createQueryBuilder();
 
         $results = $qb
-            ->select('d', 'b')
+            ->select('d', 'b', 'p')
             ->from('Domain\\Distillery', 'd')
             ->leftJoin('d.bottles', 'b')
+            ->leftJoin('b.prices', 'p')
             ->getQuery()
-            ->getResult(Query::HYDRATE_ARRAY);
+            ->getResult(Query::HYDRATE_ARRAY)
+        ;
 
         $collection = new ArrayCollection($results);
 

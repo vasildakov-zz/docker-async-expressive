@@ -23,6 +23,12 @@
             <join-column name="distillery_id" referenced-column-name="id" />
         </many-to-one>
 
+        <one-to-many field="prices" target-entity="Price" mapped-by="bottle">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
+        </one-to-many>
+
     </entity>
 
 </doctrine-mapping>

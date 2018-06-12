@@ -32,6 +32,11 @@ class Bottle implements JsonSerializable
     private $vintage = null;
 
     /**
+     * @var Price[] $prices
+     */
+    private $prices;
+
+    /**
      * Bottle constructor.
      * @param $id
      * @param $name
@@ -45,13 +50,21 @@ class Bottle implements JsonSerializable
     }
 
     /**
+     * @param Price $price
+     */
+    public function addPrice(Price $price)
+    {
+        $this->prices[] = $price;
+    }
+
+    /**
      * @return array
      */
     public function toArray() : array
     {
         return [
-            'id' => $this->id,
-            'name' => $this->name,
+            'id'         => $this->id,
+            'name'       => $this->name,
             'distillery' => $this->distillery,
         ];
     }
