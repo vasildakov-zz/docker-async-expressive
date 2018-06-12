@@ -27,8 +27,8 @@ class LoadDistilleryData extends AbstractFixture implements OrderedFixtureInterf
         foreach ($records as $record) {
             $distillery = new Distillery($record['id'], $record['name']);
             $em->persist($distillery);
+            $this->addReference($record['name'], $distillery);
         }
         $em->flush();
     }
-
 }

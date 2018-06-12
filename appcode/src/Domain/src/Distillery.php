@@ -1,10 +1,16 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace Domain;
 
+use JsonSerializable;
 
-class Distillery implements \JsonSerializable
+class Distillery implements JsonSerializable
 {
+    /**
+     * @var string
+     */
+    const STATUS_OPERATIONAL = 1;
+
     /**
      * @var
      */
@@ -30,8 +36,14 @@ class Distillery implements \JsonSerializable
      */
     private $owners;
 
+    /**
+     * @var
+     */
     private $location;
 
+    /**
+     * @var
+     */
     private $status;
 
     /**
@@ -131,11 +143,12 @@ class Distillery implements \JsonSerializable
     public function toArray() : array
     {
         return [
-            'id' => $this->getId(),
-            'name' => $this->getName(),
-            'description'   => '',
-            'founded' => 1824,
-            'region' => $this->getRegion(),
+            'id'          => $this->getId(),
+            'name'        => $this->getName(),
+            'description' => $this->description,
+            'founded'     => $this->founded,
+            'region'      => $this->getRegion(),
+            'bottles'     => $this->bottles,
         ];
     }
 

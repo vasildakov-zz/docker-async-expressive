@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e1451ae-fe8a-4c90-8663-70df47379d64" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/appcode/config/autoload/hal.global.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/migrations.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/App/src/Handler/DistilleryHandlerFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Domain/src/DistilleryCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadBottleData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Domain.Bottle.dcm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/vasil_dakov.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/vasil_dakov.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/docker-async-expressive.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/docker-async-expressive.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/cli-config.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/cli-config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appcode/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/console" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/console" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/src/App/src/ConfigProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/App/src/ConfigProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appcode/src/App/src/Handler/DistilleryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/App/src/Handler/DistilleryHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/src/App/src/Handler/HomePageHandlerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/App/src/Handler/HomePageHandlerFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appcode/src/Domain/src/Bottle.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/Domain/src/Bottle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appcode/src/Domain/src/Distillery.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/Domain/src/Distillery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Command/ImportFixturesCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Command/ImportFixturesCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadDistilleryData.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadDistilleryData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Domain.Distillery.dcm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Domain.Distillery.dcm.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,23 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoadDistilleryData.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadDistilleryData.php">
+      <file leaf-file-name="distillery.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appcode/data/fixtures/distillery.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
-              <folding>
-                <element signature="e#52#101#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigProvider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appcode/src/App/src/ConfigProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <state relative-caret-position="748">
+              <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -60,8 +37,8 @@
       <file leaf-file-name="Distillery.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appcode/src/Domain/src/Distillery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="562">
+              <caret line="154" selection-start-line="154" selection-end-line="164" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -69,8 +46,8 @@
       <file leaf-file-name="hal.global.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appcode/config/autoload/hal.global.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="63" lean-forward="true" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+            <state relative-caret-position="289">
+              <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
               <folding>
                 <element signature="e#41#63#0#PHP" expanded="true" />
               </folding>
@@ -81,29 +58,29 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appcode/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+            <state relative-caret-position="85">
+              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistilleryHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bottle.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/appcode/src/Domain/src/Bottle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistilleryHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appcode/src/App/src/Handler/DistilleryHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="58" column="46" lean-forward="true" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+            <state relative-caret-position="487">
+              <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
               <folding>
                 <element signature="e#56#104#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePageHandlerFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appcode/src/App/src/Handler/HomePageHandlerFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -124,9 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docker/nginx/config/conf.d/default-10-cache.conf" />
-        <option value="$PROJECT_DIR$/docker/nginx/config/conf.d/default-20-common-files.conf" />
-        <option value="$PROJECT_DIR$/docker/nginx/run.sh" />
         <option value="$PROJECT_DIR$/appcode/public/index.php" />
         <option value="$PROJECT_DIR$/appcode/phpunit.xml.dist" />
         <option value="$PROJECT_DIR$/docker/nginx/sites-available/default/default-dev.conf" />
@@ -134,7 +108,6 @@
         <option value="$PROJECT_DIR$/appcode/src/App/src/Handler/PingHandler.php" />
         <option value="$PROJECT_DIR$/appcode/src/Domain/src/ConfigProvider.php" />
         <option value="$PROJECT_DIR$/appcode/src/Domain/src/Region.php" />
-        <option value="$PROJECT_DIR$/appcode/src/Domain/src/Bottle.php" />
         <option value="$PROJECT_DIR$/appcode/src/Domain/src/Collection.php" />
         <option value="$PROJECT_DIR$/appcode/src/Domain/src/User.php" />
         <option value="$PROJECT_DIR$/appcode/config/cli-config.php" />
@@ -156,25 +129,29 @@
         <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Factory/EntityManagerFactory.php" />
         <option value="$PROJECT_DIR$/appcode/config/autoload/doctrine.local.php" />
         <option value="$PROJECT_DIR$/appcode/config/autoload/doctrine.global.php" />
-        <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Domain.Distillery.dcm.xml" />
         <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Command/ImportFixturesCommandFactory.php" />
         <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Command/ImportFixturesCommand.php" />
         <option value="$PROJECT_DIR$/appcode/migrations.yml" />
         <option value="$PROJECT_DIR$/appcode/console.php" />
         <option value="$PROJECT_DIR$/appcode/cli-config.php" />
         <option value="$PROJECT_DIR$/appcode/data/fixtures/distilery.json" />
-        <option value="$PROJECT_DIR$/appcode/data/fixtures/distillery.json" />
         <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/ConfigProvider.php" />
-        <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadDistilleryData.php" />
         <option value="$PROJECT_DIR$/appcode/src/App/src/Handler/HomePageHandlerFactory.php" />
         <option value="$PROJECT_DIR$/appcode/src/App/src/ConfigProvider.php" />
         <option value="$PROJECT_DIR$/appcode/config/config.php" />
         <option value="$PROJECT_DIR$/appcode/src/Domain/src/DistilleryCollection.php" />
         <option value="$PROJECT_DIR$/appcode/config/autoload/hal.global.php" />
-        <option value="$PROJECT_DIR$/appcode/config/routes.php" />
         <option value="$PROJECT_DIR$/appcode/src/App/src/Handler/DistilleryHandlerFactory.php" />
-        <option value="$PROJECT_DIR$/appcode/src/Domain/src/Distillery.php" />
+        <option value="$PROJECT_DIR$/appcode/data/fixtures/distillery.json" />
+        <option value="$PROJECT_DIR$/appcode/config/routes.php" />
+        <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadDistilleryData.php" />
+        <option value="$PROJECT_DIR$/appcode/data/fixtures/bottle.json" />
+        <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadBottleData.php" />
+        <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Domain.Bottle.dcm.xml" />
+        <option value="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Domain.Distillery.dcm.xml" />
         <option value="$PROJECT_DIR$/appcode/src/App/src/Handler/DistilleryHandler.php" />
+        <option value="$PROJECT_DIR$/appcode/src/Domain/src/Distillery.php" />
+        <option value="$PROJECT_DIR$/appcode/src/Domain/src/Bottle.php" />
       </list>
     </option>
   </component>
@@ -285,8 +262,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1467" />
-    <option name="y" value="82" />
+    <option name="x" value="1464" />
+    <option name="y" value="52" />
     <option name="width" value="1808" />
     <option name="height" value="920" />
   </component>
@@ -307,19 +284,6 @@
               <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
               <item name="docker-async-expressive" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="appcode" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker-async-expressive" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="appcode" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker-async-expressive" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="appcode" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="autoload" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
@@ -382,6 +346,50 @@
             <path>
               <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
               <item name="docker-async-expressive" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="appcode" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-async-expressive" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="appcode" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-async-expressive" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="appcode" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Doctrine" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-async-expressive" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="appcode" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Doctrine" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Fixtures" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-async-expressive" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="appcode" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Doctrine" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Mapping" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="docker-async-expressive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-async-expressive" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="docker" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -431,15 +439,15 @@
       <updated>1524233005669</updated>
       <workItem from="1524233006967" duration="5598000" />
       <workItem from="1528196769250" duration="3234000" />
-      <workItem from="1528644308731" duration="20449000" />
+      <workItem from="1528644308731" duration="26151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29281000" />
+    <option name="totallyTimeSpent" value="34983000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1455" y="108" width="1808" height="920" extended-state="0" />
+    <frame x="1464" y="52" width="1808" height="920" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26382744" />
@@ -470,47 +478,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/appcode/bin/console">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/Domain/src/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/Domain/src/Collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/mysql/conf.d/custom.cnf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/vendor/dasprid/container-interop-doctrine/src/EntityManagerFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/config/development.config.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/config/development.config.php.dist">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/appcode/config/autoload/dependencies.global.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -676,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/data/fixtures/distillery.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appcode/cli-config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -734,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Domain.Distillery.dcm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appcode/src/App/src/Handler/HomePageHandler.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -778,58 +731,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadDistilleryData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
-          <folding>
-            <element signature="e#52#101#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appcode/src/Domain/src/DistilleryCollection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/App/src/Handler/HomePageHandlerFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/App/src/ConfigProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/Domain/src/Distillery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/config/autoload/hal.global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="63" lean-forward="true" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
-          <folding>
-            <element signature="e#41#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -850,13 +755,127 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive-hal/src/Renderer/JsonRenderer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding>
+            <element signature="e#6#304#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/App/src/ConfigProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/App/src/Handler/HomePageHandlerFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Domain/src/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/config/autoload/hal.global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding>
+            <element signature="e#41#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Domain.Distillery.dcm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="61" lean-forward="true" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/data/fixtures/bottle.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadDistilleryData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="e#52#101#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/data/fixtures/distillery.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Domain.Bottle.dcm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/appcode/src/App/src/Handler/DistilleryHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="58" column="46" lean-forward="true" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+        <state relative-caret-position="487">
+          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
           <folding>
             <element signature="e#56#104#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/data/doctrine/proxies/__CG__DomainBottle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadBottleData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Domain/src/Distillery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="154" selection-start-line="154" selection-end-line="164" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Domain/src/Bottle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
         </state>
       </provider>
     </entry>

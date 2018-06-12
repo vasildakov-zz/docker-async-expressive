@@ -40,9 +40,9 @@ class DistilleryHandler implements RequestHandlerInterface
         HalResponseFactory $responseFactory
     )
     {
-        $this->entityManager = $entityManager;
+        $this->entityManager     = $entityManager;
         $this->resourceGenerator = $resourceGenerator;
-        $this->responseFactory = $responseFactory;
+        $this->responseFactory   = $responseFactory;
     }
 
     /**
@@ -51,30 +51,20 @@ class DistilleryHandler implements RequestHandlerInterface
      */
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
-        /* $qb = $this->em->createQueryBuilder();
+        $qb = $this->entityManager->createQueryBuilder();
+
         $results = $qb
-            ->select('d.id, d.name, d.description, d.status, d.founded')
+            ->select('d', 'b')
             ->from('Domain\\Distillery', 'd')
+            ->leftJoin('d.bottles', 'b')
             ->getQuery()
             ->getResult(Query::HYDRATE_ARRAY);
 
-        $collection = new ArrayCollection($results); */
+        $collection = new ArrayCollection($results);
 
-
-        $distillery = $this->entityManager->find('Domain\Distillery', 'cb0861ca-6d73-11e8-9223-0242ac190003');
-        $resource = new HalResource($distillery->toArray());
-        $resource = $resource->withLink(new Link('self'));
-
-        //$resource = $this->resourceGenerator->fromObject($distillery, $request);
-        //return $this->responseFactory->createResponse($request, $resource);
-
-        $renderer = new JsonRenderer();
-
-        return new TextResponse(
-            $renderer->render($resource),
-            StatusCodeInterface::STATUS_OK,
-            ['Content-Type' => 'application/hal+json']
+        return new JsonResponse(
+            $collection->toArray(),
+            StatusCodeInterface::STATUS_OK
         );
-
     }
 }
