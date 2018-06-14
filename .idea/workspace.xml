@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e1451ae-fe8a-4c90-8663-70df47379d64" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/appcode/src/App/src/Entity/Brand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Basket/src/Basket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Basket/src/Item.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Fixtures/LoadProductData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/App.Entity.Brand.dcm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Doctrine/Mapping/Product.Product.dcm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Infrastructure/src/Zend/Paginator/Adapter/DoctrinePaginator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Product/src/GetProducts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Product/src/GetProductsFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Product/src/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Product/src/ProductInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appcode/src/Product/src/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/vasil_dakov.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/vasil_dakov.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/docker-async-expressive.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/docker-async-expressive.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcode/src/App/src/ConfigProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/App/src/ConfigProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appcode/src/Basket/src/Basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/appcode/src/Basket/src/Basket.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +19,8 @@
       <file leaf-file-name="GetProducts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appcode/src/Product/src/GetProducts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+            <state relative-caret-position="670">
+              <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
               <folding>
                 <element signature="e#27#67#0#PHP" expanded="true" />
               </folding>
@@ -61,8 +43,8 @@
       <file leaf-file-name="Paginator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appcode/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/Paginator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="175" column="29" selection-start-line="175" selection-start-column="29" selection-end-line="175" selection-end-column="29" />
+            <state relative-caret-position="-1">
+              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
             </state>
           </provider>
         </entry>
@@ -82,7 +64,7 @@
       <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appcode/src/Product/src/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="-44">
               <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
             </state>
           </provider>
@@ -91,8 +73,8 @@
       <file leaf-file-name="Basket.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appcode/src/Basket/src/Basket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="161">
+              <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
               <folding>
                 <element signature="e#26#74#0#PHP" expanded="true" />
               </folding>
@@ -447,12 +429,12 @@
       <workItem from="1524233006967" duration="5598000" />
       <workItem from="1528196769250" duration="3234000" />
       <workItem from="1528644308731" duration="26274000" />
-      <workItem from="1528811249345" duration="18416000" />
+      <workItem from="1528811249345" duration="21501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53522000" />
+    <option name="totallyTimeSpent" value="56607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1572" y="25" width="1644" height="961" extended-state="0" />
@@ -788,47 +770,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/Product/src/GetProductsFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#115#152#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/SPL/SPL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-717">
           <caret line="1830" column="20" selection-start-line="1830" selection-start-column="20" selection-end-line="1830" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/Paginator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="175" column="29" selection-start-line="175" selection-start-column="29" selection-end-line="175" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/Infrastructure/src/Zend/Paginator/Adapter/DoctrinePaginator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="e#82#126#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appcode/src/Product/src/GetProducts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
-          <folding>
-            <element signature="e#27#67#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,9 +791,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Product/src/GetProducts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+          <folding>
+            <element signature="e#27#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Infrastructure/src/Zend/Paginator/Adapter/DoctrinePaginator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <element signature="e#82#126#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/Paginator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appcode/src/Product/src/GetProductsFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+          <folding>
+            <element signature="e#115#152#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/appcode/src/Product/src/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="-44">
           <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
@@ -862,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appcode/src/Basket/src/Basket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="161">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
           <folding>
             <element signature="e#26#74#0#PHP" expanded="true" />
           </folding>

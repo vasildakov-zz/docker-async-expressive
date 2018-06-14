@@ -32,7 +32,7 @@ class Basket
     {
         $order = new Order();
         foreach ($this->items as $item) {
-            $order->addLine(new Line());
+            $order->addLine(new OrderLine());
         }
 
         return $order;
@@ -43,18 +43,46 @@ class Basket
 class Order {
 
     /**
-     * @var Line[] $lines
+     * @var 
+     */
+    private $user;
+
+    /**
+     * @var OrderLine[] $lines
      */
     private $lines = [];
 
-    public function addLine(Line $line)
+    /**
+     * @var Payment One to One, One order has one payment
+     */
+    private $payment = null;
+
+    /** @var \DateTime */
+    private $ordered;
+
+
+    public function addLine(OrderLine $line)
     {
         $this->lines[] = $line;
     }
+
+    public function isPaid() {}
 }
 
 // The order line
-class Line
+class OrderLine
 {
     private $id;
+}
+
+
+class Payment
+{
+    /**
+     * @var Order One Payment has One Order
+     */
+    private $order;
+
+    /** @var \DateTime */
+    private $paid;
 }
