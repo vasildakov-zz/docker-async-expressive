@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 namespace App;
+use Product\GetProducts;
+use Product\GetProductsFactory;
 
 /**
  * The configuration provider for the App module
@@ -38,6 +40,7 @@ class ConfigProvider
             'factories'  => [
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
                 Handler\DistilleryHandler::class => Handler\DistilleryHandlerFactory::class,
+                GetProducts::class => GetProductsFactory::class
             ],
         ];
     }

@@ -37,4 +37,6 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
     $app->get('/api/distillery/{id:\d+}', App\Handler\DistilleryHandler::class, 'api.distillery');
     $app->get('/api/distillery', App\Handler\DistilleryHandler::class, 'api.distilleries');
+
+    $app->get('/api/products', Product\GetProducts::class, 'api.products');
 };

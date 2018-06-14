@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/appcode/src/App/src" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/appcode/test/AppTest" isTestSource="true" packagePrefix="AppTest\" />
       <sourceFolder url="file://$MODULE_DIR$/appcode/src/DomainTest/src" isTestSource="true" packagePrefix="DomainTest\" />
+      <sourceFolder url="file://$MODULE_DIR$/appcode/src/Basket/src" isTestSource="false" packagePrefix="Basket\" />
+      <sourceFolder url="file://$MODULE_DIR$/appcode/src/Product/src" isTestSource="false" packagePrefix="Product\" />
       <sourceFolder url="file://$MODULE_DIR$/appcode/src/Domain/src" isTestSource="false" packagePrefix="Domain\" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/cache/adapter-common" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/cache/hierarchical-cache" />
