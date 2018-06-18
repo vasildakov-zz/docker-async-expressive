@@ -5,7 +5,9 @@ namespace Infrastructure\Doctrine\Fixtures;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use Domain\Distillery;
+use App\Distillery\Distillery;
+
+use DoctrineModule\Stdlib\Hydrator\DoctrineObject as DoctrineHydrator;
 
 /**
  * Class LoadDistilleryData
@@ -24,8 +26,12 @@ class LoadDistilleryData extends AbstractFixture implements OrderedFixtureInterf
     {
         $reader = new \Zend\Config\Reader\Json();
         $records   = $reader->fromFile('./data/fixtures/distillery.json');
+
+        $hydrator = new DoctrineHydrator($em, Distillery::class);
+
         foreach ($records as $record) {
-            $distillery = new Distillery($record['id'], $record['name']);
+            $distillery = $hydrator->hydrate($record, new Distillery());
+
             $em->persist($distillery);
             $this->addReference($record['name'], $distillery);
         }

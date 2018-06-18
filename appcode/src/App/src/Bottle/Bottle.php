@@ -1,7 +1,8 @@
 <?php declare(strict_types = 1);
 
-namespace Domain;
+namespace App\Bottle;
 
+use App\Producer\Producer;
 use JsonSerializable;
 
 class Bottle implements JsonSerializable
@@ -16,10 +17,13 @@ class Bottle implements JsonSerializable
      */
     private $name;
 
+    private $type;
+
+
     /**
-     * @var Distillery $distillery
+     * @var Producer $producer
      */
-    private $distillery;
+    private $producer;
 
     /**
      * @var int|null
@@ -32,7 +36,7 @@ class Bottle implements JsonSerializable
     private $vintage = null;
 
     /**
-     * @var Price[] $prices
+     * @var \Domain\Price[] $prices
      */
     private $prices;
 
@@ -40,19 +44,19 @@ class Bottle implements JsonSerializable
      * Bottle constructor.
      * @param $id
      * @param $name
-     * @param $distillery
+     * @param $producer
      */
-    public function __construct($id, $name, $distillery)
+    public function __construct($id, $name, $producer)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->distillery = $distillery;
+        $this->producer = $producer;
     }
 
     /**
-     * @param Price $price
+     * @param \Domain\Price $price
      */
-    public function addPrice(Price $price)
+    public function addPrice(\Domain\Price $price)
     {
         $this->prices[] = $price;
     }
@@ -65,7 +69,7 @@ class Bottle implements JsonSerializable
         return [
             'id'         => $this->id,
             'name'       => $this->name,
-            'distillery' => $this->distillery,
+            'distillery' => $this->producer,
         ];
     }
 

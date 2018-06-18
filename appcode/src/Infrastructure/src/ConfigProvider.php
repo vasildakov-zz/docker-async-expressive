@@ -5,6 +5,8 @@ namespace Infrastructure;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Common\DataFixtures;
+use Doctrine\ORM\Tools\Pagination\Paginator;
+use Infrastructure\Zend\Paginator\Adapter\DoctrinePaginator;
 
 
 /**

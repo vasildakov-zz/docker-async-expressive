@@ -1,37 +1,42 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Product;
+namespace App\Distillery;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Tools\Pagination\Paginator;
-use Fig\Http\Message\StatusCodeInterface;
+
 use Infrastructure\Zend\Paginator\Adapter\DoctrinePaginator;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Zend\Diactoros\Response\JsonResponse;
 
-/**
- * Class GetProducts
- *
- * @author     Vasil Dakov <vasildakov@gmail.com>
- * @todo The handle should be abstracted
- */
-class GetProducts implements RequestHandlerInterface
+use Zend\Expressive\Hal\HalResponseFactory;
+use Zend\Expressive\Hal\ResourceGenerator;
+
+class GetDistilleriesHandler implements RequestHandlerInterface
 {
     /**
      * @var EntityManagerInterface
      */
     private $em;
 
+    private $resourceGenerator;
+
+    private $responseFactory;
+
     /**
      * DistilleryHandler constructor.
      * @param EntityManagerInterface $em
      * @todo abstract factory?
      */
-    public function __construct(EntityManagerInterface $em)
-    {
+    public function __construct(
+        EntityManagerInterface $em,
+        ResourceGenerator $resourceGenerator,
+        HalResponseFactory $responseFactory
+    ) {
         $this->em = $em;
+        $this->resourceGenerator = $resourceGenerator;
+        $this->responseFactory   = $responseFactory;
     }
 
     /**
@@ -39,15 +44,14 @@ class GetProducts implements RequestHandlerInterface
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        $qb = $this->em->createQueryBuilder();
-
         /**
          * @todo move it to the repository
          * $results = $this->repository->find($criteria);
          */
+        $qb = $this->em->createQueryBuilder();
         $query = $qb
             ->select('p')
-            ->from('Product\\Product', 'p')
+            ->from('App\\Distillery\\Distillery', 'p')
             ->getQuery()
         ;
 
@@ -55,19 +59,15 @@ class GetProducts implements RequestHandlerInterface
          * @todo the repository should return the paginator, or it should extend paginator
          */
         $adapter = new DoctrinePaginator(new Paginator($query));
-        $paginator = new \Zend\Paginator\Paginator($adapter);
-        $paginator->setCurrentPageNumber(1);
-        $paginator->setItemCountPerPage(5);
+        $distilleries = new DistilleryCollection($adapter);
+        $distilleries->setCurrentPageNumber(1);
+        $distilleries->setItemCountPerPage(10);
 
         /**
          * @todo response payload factory
          */
-        return new JsonResponse(
-            [
-                'data'  => $paginator->getCurrentItems(),
-                'pages' => $paginator->getPages(),
-            ],
-            StatusCodeInterface::STATUS_OK
-        );
+        $resource = $this->resourceGenerator->fromObject($distilleries, $request);
+        return $this->responseFactory->createResponse($request, $resource);
+
     }
 }

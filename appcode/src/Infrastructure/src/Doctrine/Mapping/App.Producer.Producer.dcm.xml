@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<doctrine-mapping
+        xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity name="App\Producer\Producer" table="producer" inheritance-type="SINGLE_TABLE">
+
+        <!-- definition here -->
+        <indexes>
+            <index name="name_idx" columns="name" />
+            <index columns="name" />
+        </indexes>
+
+        <!-- definition here -->
+        <id name="id" type="string">
+            <generator strategy="UUID" />
+        </id>
+
+        <discriminator-column name="type" type="string" />
+        <discriminator-map>
+            <discriminator-mapping value="1" class="App\Distillery\Distillery" />
+            <discriminator-mapping value="2" class="App\Brand\Brand" />
+            <discriminator-mapping value="3" class="App\Bottler\Bottler" />
+        </discriminator-map>
+
+        <!-- properties -->
+        <field name="name" column="name" type="string" nullable="false" />
+
+        <!-- relations -->
+        <one-to-many field="bottles" target-entity="App\Bottle\Bottle" mapped-by="producer" />
+
+    </entity>
+
+</doctrine-mapping>

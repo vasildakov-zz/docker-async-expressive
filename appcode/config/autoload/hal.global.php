@@ -1,5 +1,7 @@
 <?php
 
+return [];
+/*
 use Domain\Distillery;
 use Domain\DistilleryCollection;
 
@@ -24,3 +26,4 @@ return [
         ],
     ],
 ];
+*/

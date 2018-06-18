@@ -1,25 +1,27 @@
 <?php declare(strict_types = 1);
 
-namespace Domain;
+namespace App\Distillery;
 
+use App\Producer\Producer;
+use Domain\EntityInterface;
 use JsonSerializable;
 
-class Distillery implements JsonSerializable
+class Distillery extends Producer implements EntityInterface, JsonSerializable
 {
     /**
-     * @var string
+     * @var int
+     */
+    const STATUS_UNKNOWN = 0;
+
+    /**
+     * @var int
      */
     const STATUS_OPERATIONAL = 1;
 
-    /**
-     * @var
-     */
-    private $id;
-
-    /**
-     * @var string $name
-     */
-    private $name;
+    protected $statuses = [
+        self::STATUS_UNKNOWN     => 'Unknown',
+        self::STATUS_OPERATIONAL => 'Operational',
+    ];
 
     /**
      * @var string $description
@@ -32,7 +34,7 @@ class Distillery implements JsonSerializable
     private $founded;
 
     /**
-     * @var Company[] $owners
+     * @var array $owners
      */
     private $owners;
 
@@ -47,69 +49,63 @@ class Distillery implements JsonSerializable
     private $status;
 
     /**
-     * @var Region $region
+     * @var string $region
      */
     private $region;
 
     /**
      * @var
      */
-    private $bottles;
+    protected $bottles;
 
     /**
-     * Distillery constructor.
-     * @param $id
-     * @param $name
+     * @param int|null $status
+     * @return Distillery
      */
-    public function __construct($id, $name)
+    public function setStatus(int $status = null) : Distillery
     {
-        $this->setId($id);
-        $this->setName($name);
-    }
-
-    /**
-     * @param $id
-     * @return $this
-     */
-    private function setId($id)
-    {
-        $this->id = $id;
+        if (null === $status) {
+            $status = self::STATUS_OPERATIONAL;
+        }
+        $this->status = $status;
 
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getId()
+    public function getStatus() : int
     {
-        return $this->id;
+        return $this->status;
     }
 
     /**
-     * @param $name
+     * @param int|null $founded
      * @return $this
      */
-    private function setName($name)
+    public function setFounded(int $founded = null) : Distillery
     {
-        $this->name = $name;
+        $this->founded = $founded;
 
         return $this;
     }
 
     /**
-     * @return string
+     * @return int|null
      */
-    public function getName()
+    public function getFounded() : ?int
     {
-        return $this->name;
+        return $this->founded;
     }
 
     /**
+     * The whisky region is optional
+     *
      * @param $region
      * @return $this
      */
-    public function setRegion($region)
+    public function setRegion($region = null) : Distillery
     {
         $this->region = $region;
 
@@ -117,25 +113,12 @@ class Distillery implements JsonSerializable
     }
 
     /**
-     * @return Region
+     * @return string|null
      */
-    public function getRegion()
+    public function getRegion(): ?string
     {
         return $this->region;
     }
-
-
-    public function addBottle(Bottle $bottle)
-    {
-
-    }
-
-    public function removeBottle(Bottle $bottle)
-    {
-
-    }
-
-    public function getBottles() {}
 
     /**
      * @return array
@@ -143,12 +126,12 @@ class Distillery implements JsonSerializable
     public function toArray() : array
     {
         return [
-            'id'          => $this->getId(),
-            'name'        => $this->getName(),
+            'id'          => $this->id,
+            'name'        => $this->name,
             'description' => $this->description,
             'founded'     => $this->founded,
-            'region'      => $this->getRegion(),
-            'bottles'     => $this->bottles,
+            'region'      => $this->region,
+            //'bottles'     => $this->bottles,
         ];
     }
 

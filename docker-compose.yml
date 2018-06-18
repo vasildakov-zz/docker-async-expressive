@@ -13,7 +13,7 @@ services:
         volumes_from:
             - appdata
         environment:
-            VIRTUAL_HOST: "expressive.dev"
+            VIRTUAL_HOST: "whi.sky"
             NGINX_CONF: "dev"
         depends_on:
             - php-fpm

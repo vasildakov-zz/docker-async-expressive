@@ -22,6 +22,7 @@
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/common" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/data-fixtures" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/doctrine-module" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/lexer" />
@@ -29,6 +30,8 @@
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/doctrine/orm" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/fig/http-message-util" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/ircmaxell/random-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/ircmaxell/security-lib" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/nikic/fast-route" />
@@ -58,6 +61,7 @@
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/ramsey/uuid-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/comparator" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/diff" />
@@ -69,6 +73,7 @@
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/recursion-context" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/resource-operations" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/spatie/array-to-xml" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/squizlabs/php_codesniffer" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/symfony/polyfill-ctype" />
@@ -79,10 +84,13 @@
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/willdurand/negotiation" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/wshafer/swoole-expressive" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-authentication" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-cache" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-code" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-component-installer" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-config" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-config-aggregator" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-crypt" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-diactoros" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-escaper" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-eventmanager" />
@@ -94,12 +102,25 @@
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-expressive-template" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-expressive-tooling" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-expressive-twigrenderer" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-filter" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-form" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-http" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-httphandlerrunner" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-hydrator" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-inputfilter" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-math" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-modulemanager" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-mvc" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-paginator" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-problem-details" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-router" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-servicemanager" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-stdlib" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-stratigility" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-uri" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zendframework/zend-view" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zfcampus/zf-composer-autoloading" />
       <excludeFolder url="file://$MODULE_DIR$/appcode/vendor/zfcampus/zf-development-mode" />
     </content>

@@ -5,7 +5,7 @@ namespace Infrastructure\Doctrine\Fixtures;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use Domain\Bottle;
+use App\Bottle\Bottle;
 use Domain\Price;
 
 class LoadBottleData extends AbstractFixture implements OrderedFixtureInterface

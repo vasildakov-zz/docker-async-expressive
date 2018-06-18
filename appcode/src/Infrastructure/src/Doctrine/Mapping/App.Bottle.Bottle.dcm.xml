@@ -6,27 +6,28 @@
         xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                         http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
 
-    <entity name="Domain\Distillery" table="distillery">
+    <entity name="App\Bottle\Bottle" table="bottle">
 
         <!-- definition here -->
-        <indexes>
-            <index name="name_idx" columns="name" />
-            <index columns="name" />
-        </indexes>
-
         <id name="id" type="string">
             <generator strategy="UUID" />
         </id>
 
         <!-- properties -->
         <field name="name" column="name" type="string" nullable="false" />
-        <field name="description" column="description" type="string" nullable="true" />
-        <field name="founded" column="founded" type="integer" nullable="true" />
-        <field name="location" column="location" type="string" nullable="true" />
-        <field name="status" column="status" type="string" nullable="true" />
+        <field name="age" column="age" type="integer" nullable="true" />
+        <field name="vintage" column="vintage" type="integer" nullable="true" />
 
         <!-- relations -->
-        <one-to-many field="bottles" target-entity="Bottle" mapped-by="distillery" />
+        <many-to-one field="producer" target-entity="App\Producer\Producer" inversed-by="bottles">
+            <join-column name="producer_id" referenced-column-name="id" />
+        </many-to-one>
+
+        <one-to-many field="prices" target-entity="Domain\Price" mapped-by="bottle">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
+        </one-to-many>
 
     </entity>
 

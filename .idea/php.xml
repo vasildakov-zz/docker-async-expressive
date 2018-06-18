@@ -100,6 +100,27 @@
       <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-expressive-hal" />
       <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-hydrator" />
       <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-paginator" />
+      <path value="$PROJECT_DIR$/appcode/vendor/ramsey/uuid-doctrine" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-filter" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-math" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-crypt" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-validator" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-uri" />
+      <path value="$PROJECT_DIR$/appcode/vendor/ircmaxell/random-lib" />
+      <path value="$PROJECT_DIR$/appcode/vendor/ircmaxell/security-lib" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-problem-details" />
+      <path value="$PROJECT_DIR$/appcode/vendor/spatie/array-to-xml" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-view" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-cache" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-modulemanager" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-http" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-loader" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-router" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-mvc" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-form" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-authentication" />
+      <path value="$PROJECT_DIR$/appcode/vendor/zendframework/zend-inputfilter" />
+      <path value="$PROJECT_DIR$/appcode/vendor/doctrine/doctrine-module" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

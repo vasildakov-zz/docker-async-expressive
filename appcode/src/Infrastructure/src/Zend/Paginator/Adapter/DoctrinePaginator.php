@@ -3,6 +3,7 @@
 namespace Infrastructure\Zend\Paginator\Adapter;
 
 use Doctrine\ORM\Tools\Pagination\Paginator;
+use Product\Product;
 use Zend\Paginator\Adapter\AdapterInterface;
 
 class DoctrinePaginator implements AdapterInterface
@@ -49,6 +50,7 @@ class DoctrinePaginator implements AdapterInterface
             ->setFirstResult($offset)
             ->setMaxResults($itemCountPerPage)
         ;
+
         return $this->paginator->getIterator();
     }
 

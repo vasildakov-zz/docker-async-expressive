@@ -6,7 +6,8 @@ use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Product\Product;
+use App\Product\Product;
+use Ramsey\Uuid\Uuid;
 
 class LoadProductData extends AbstractFixture implements OrderedFixtureInterface
 {
@@ -17,8 +18,13 @@ class LoadProductData extends AbstractFixture implements OrderedFixtureInterface
 
     public function load(ObjectManager $em)
     {
+        $factory = new \RandomLib\Factory;
+        $generator = $factory->getMediumStrengthGenerator();
+
+
         for($i = 1; $i < 100; $i++) {
-            $product = new Product($i, "Product $i");
+            $slug = $generator->generateString(6, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+            $product = new Product(Uuid::uuid4(), "Product $i", $slug);
             $em->persist($product);
         }
         $em->flush();

@@ -74,6 +74,13 @@ final class EntityManagerFactory
 
         $platform = $em->getConnection()->getDatabasePlatform();
 
+        \Doctrine\DBAL\Types\Type::addType('uuid', 'Ramsey\Uuid\Doctrine\UuidType');
+        \Doctrine\DBAL\Types\Type::addType('uuid_binary', 'Ramsey\Uuid\Doctrine\UuidBinaryType');
+        \Doctrine\DBAL\Types\Type::addType('uuid_binary_ordered_time', 'Ramsey\Uuid\Doctrine\UuidBinaryOrderedTimeType');
+
+        $platform->registerDoctrineTypeMapping('uuid_binary_ordered_time', 'binary');
+        //$platform->registerDoctrineTypeMapping('uuid', 'Ramsey\Uuid\Doctrine\UuidType');
+
         /* \Doctrine\DBAL\Types\Type::addType('SkuId', Type\SkuIdType::class);
         \Doctrine\DBAL\Types\Type::addType('ReservationId', Type\ReservationIdType::class);
         \Doctrine\DBAL\Types\Type::addType('LocationId', Type\LocationIdType::class);

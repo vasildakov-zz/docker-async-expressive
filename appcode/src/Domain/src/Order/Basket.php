@@ -43,7 +43,7 @@ class Basket
 class Order {
 
     /**
-     * @var 
+     * @var
      */
     private $user;
 
@@ -57,22 +57,37 @@ class Order {
      */
     private $payment = null;
 
-    /** @var \DateTime */
+    /**
+     * @var \DateTime $ordered
+     */
     private $ordered;
 
-
+    /**
+     * @param OrderLine $line
+     */
     public function addLine(OrderLine $line)
     {
         $this->lines[] = $line;
     }
 
-    public function isPaid() {}
+    public function isPaid() : bool
+    {
+        return $this->payment->success();
+    }
 }
 
 // The order line
 class OrderLine
 {
     private $id;
+
+    private $product;
+
+    private $quantity;
+
+    private $total;
+
+
 }
 
 

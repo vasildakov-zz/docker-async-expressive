@@ -20,7 +20,7 @@
         <field name="updated" column="updated" type="datetime" nullable="false" />
 
         <!-- relations -->
-        <many-to-one field="bottle" target-entity="Bottle" inversed-by="prices">
+        <many-to-one field="bottle" target-entity="App\Bottle\Bottle" inversed-by="prices">
             <join-column name="bottle_id" referenced-column-name="id" />
         </many-to-one>
 

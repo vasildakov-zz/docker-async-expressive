@@ -1,10 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Product;
+namespace App\Product;
 
 use Psr\Container\ContainerInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Doctrine\ORM\EntityManager;
+use Zend\Expressive\Hal\HalResponseFactory;
+use Zend\Expressive\Hal\ResourceGenerator;
 
 /**
  * Class GetProductsFactory
@@ -15,6 +17,10 @@ class GetProductsFactory
 {
     public function __invoke(ContainerInterface $container) : RequestHandlerInterface
     {
-        return new GetProducts($container->get(EntityManager::class));
+        return new GetProducts(
+            $container->get(EntityManager::class),
+            $container->get(ResourceGenerator::class),
+            $container->get(HalResponseFactory::class)
+        );
     }
 }

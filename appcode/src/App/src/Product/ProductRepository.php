@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Product;
+namespace App\Product;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Query;

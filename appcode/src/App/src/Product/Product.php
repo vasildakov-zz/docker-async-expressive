@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Product;
+namespace App\Product;
 
 /**
  * Class Product
@@ -15,19 +15,50 @@ class Product implements \JsonSerializable
     private $id;
 
     /**
-     * @var
+     * @var string
      */
     private $name;
+
+    /**
+     * @var string
+     */
+    private $slug;
+
 
     /**
      * Product constructor.
      * @param $id
      * @param $name
      */
-    public function __construct($id, $name)
+    public function __construct($id, $name, $slug)
     {
         $this->id   = $id;
         $this->name = $name;
+        $this->slug = $slug;
+    }
+
+    /**
+     * @return string
+     */
+    public function getId() : string
+    {
+        return (string)$this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSlug() : string
+    {
+        return $this->slug;
     }
 
     /**
@@ -36,8 +67,9 @@ class Product implements \JsonSerializable
     public function toArray() : array
     {
         return [
-            'id'   => $this->id,
+            'id'   => (string) $this->id,
             'name' => $this->name,
+            'slug' => $this->slug,
         ];
     }
 
