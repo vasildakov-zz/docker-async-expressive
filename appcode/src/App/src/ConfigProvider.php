@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace App;
 
@@ -35,8 +33,8 @@ class ConfigProvider
     public function __invoke() : array
     {
         return [
-            'dependencies' => $this->getDependencies(),
-            'templates'    => $this->getTemplates(),
+            'dependencies'     => $this->getDependencies(),
+            'templates'        => $this->getTemplates(),
             MetadataMap::class => $this->getMetadataMap(),
         ];
     }
@@ -51,15 +49,20 @@ class ConfigProvider
                 Handler\PingHandler::class => Handler\PingHandler::class,
             ],
             'factories'  => [
-                Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
+                // to be removed
+                Handler\HomePageHandler::class   => Handler\HomePageHandlerFactory::class,
                 Handler\DistilleryHandler::class => Handler\DistilleryHandlerFactory::class,
 
-                GetProducts::class => GetProductsFactory::class,
+                // PSR-15: HTTP Server Request Handlers
+                GetProducts::class            => GetProductsFactory::class,
                 GetDistilleriesHandler::class => GetDistilleriesHandlerFactory::class,
             ],
         ];
     }
 
+    /**
+     * @return array
+     */
     public function getMetadataMap() : array
     {
         return [

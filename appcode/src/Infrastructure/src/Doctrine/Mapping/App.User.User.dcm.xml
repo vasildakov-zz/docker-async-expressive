@@ -6,23 +6,25 @@
         xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                         http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
 
-    <entity name="Domain\Price" table="price">
+    <entity name="App\User\User" table="user">
 
         <!-- definition here -->
-        <id name="id" type="string">
+        <id name="id" type="guid">
             <generator strategy="UUID" />
         </id>
 
         <!-- properties -->
-        <field name="amount" column="amount" type="float" nullable="false" />
-
+        <field name="name" column="name" type="string" nullable="false" />
+        <field name="surname" column="surname" type="string" nullable="false" />
+        <field name="email" column="email" type="string" nullable="false" unique="true" />
         <field name="created" column="created" type="datetime" nullable="false" />
         <field name="updated" column="updated" type="datetime" nullable="false" />
 
-        <!-- relations -->
-        <many-to-one field="bottle" target-entity="App\Bottle\Bottle" inversed-by="prices">
-            <join-column name="bottle_id" referenced-column-name="id" />
-        </many-to-one>
+        <one-to-many field="collections" target-entity="App\User\Collection" mapped-by="user">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
+        </one-to-many>
 
     </entity>
 

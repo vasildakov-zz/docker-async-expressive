@@ -3,10 +3,15 @@
 namespace App\Bottle;
 
 use App\Producer\Producer;
+use App\Slug\Slug;
+use App\TimeStampable;
+use Doctrine\Common\Collections\ArrayCollection;
 use JsonSerializable;
 
 class Bottle implements JsonSerializable
 {
+    use TimeStampable;
+
     /**
      * @var
      */
@@ -17,6 +22,9 @@ class Bottle implements JsonSerializable
      */
     private $name;
 
+    /**
+     * @var
+     */
     private $type;
 
 
@@ -31,9 +39,14 @@ class Bottle implements JsonSerializable
     private $age = null;
 
     /**
-     * @var int|null
+     * @var int|null $vintage
      */
     private $vintage = null;
+
+    /**
+     * @var string $reference
+     */
+    private $reference;
 
     /**
      * @var \Domain\Price[] $prices
@@ -46,11 +59,47 @@ class Bottle implements JsonSerializable
      * @param $name
      * @param $producer
      */
-    public function __construct($id, $name, $producer)
+    public function __construct()
     {
-        $this->id = $id;
+        $this->prices = new ArrayCollection();
+    }
+
+    /**
+     * @param string $name
+     * @return $this
+     */
+    public function setName(string $name)
+    {
         $this->name = $name;
-        $this->producer = $producer;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string|null $reference
+     * @return $this
+     */
+    public function setReference(string $reference)
+    {
+        $this->reference = $reference;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReference()
+    {
+        return $this->reference;
     }
 
     /**
@@ -58,7 +107,30 @@ class Bottle implements JsonSerializable
      */
     public function addPrice(\Domain\Price $price)
     {
-        $this->prices[] = $price;
+        $this->prices->add($price);
+    }
+
+
+    public function getPrices()
+    {
+        return $this->prices;
+    }
+
+
+    public function addPrices(\Doctrine\Common\Collections\Collection $prices)
+    {
+        foreach ($prices as $price) {
+            $price->setBottle($this);
+            $this->prices->add($price);
+        }
+    }
+
+    public function removePrices(\Doctrine\Common\Collections\Collection $prices)
+    {
+        foreach ($prices as $price) {
+            $price->setBottle(null);
+            $this->prices->removeElement($price);
+        }
     }
 
     /**

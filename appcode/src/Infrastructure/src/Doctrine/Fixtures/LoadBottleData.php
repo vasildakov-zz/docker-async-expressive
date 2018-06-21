@@ -2,11 +2,12 @@
 
 namespace Infrastructure\Doctrine\Fixtures;
 
+use App\Slug\Slug;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use DoctrineModule\Stdlib\Hydrator\DoctrineObject as DoctrineHydrator;
 use App\Bottle\Bottle;
-use Domain\Price;
 
 class LoadBottleData extends AbstractFixture implements OrderedFixtureInterface
 {
@@ -19,23 +20,17 @@ class LoadBottleData extends AbstractFixture implements OrderedFixtureInterface
     {
         $reader = new \Zend\Config\Reader\Json();
         $records   = $reader->fromFile('./data/fixtures/bottle.json');
+
+        $hydrator = new DoctrineHydrator($em, Bottle::class);
+
         foreach ($records as $record) {
-            $bottle = new Bottle($record['id'], $record['name'], $this->getReference($record['distillery']));
-            if ($record['prices']) {
-                foreach ($record['prices'] as $data) {
-                    $bottle->addPrice(
-                        new Price(
-                            $data['id'],
-                            $bottle,
-                            $data['amount'],
-                            $data['currency']
-                        )
-                    );
-                }
-            }
+            $bottle = $hydrator->hydrate($record, new Bottle());
+
+            $reference = (new Slug())($bottle->getName());
+            $bottle->setReference($reference);
 
             $em->persist($bottle);
-            $this->addReference($record['name'], $bottle);
+            $this->addReference($reference, $bottle);
         }
         $em->flush();
     }

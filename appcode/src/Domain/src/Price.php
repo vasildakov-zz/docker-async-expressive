@@ -22,11 +22,6 @@ class Price implements JsonSerializable
     private $amount;
 
     /**
-     * @var string $currency
-     */
-    private $currency;
-
-    /**
      * @var \DateTime $created
      */
     private $created;
@@ -43,15 +38,36 @@ class Price implements JsonSerializable
      * @param $amount
      * @param $currency
      */
-    public function __construct($id, $bottle, $amount, $currency)
+    public function __construct()
     {
-        $this->id       = $id;
-        $this->bottle   = $bottle;
-        $this->amount   = $amount;
-        $this->currency = $currency;
-
         $this->created = new \DateTime('now');
         $this->updated = new \DateTime('now');
+    }
+
+
+    public function setBottle($bottle)
+    {
+        $this->bottle = $bottle;
+
+        return $this;
+    }
+
+    public function getBottle()
+    {
+        return $this->bottle;
+    }
+
+
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+
+        return $this;
+    }
+
+    public function getAmount()
+    {
+        return $this->amount;
     }
 
     /**

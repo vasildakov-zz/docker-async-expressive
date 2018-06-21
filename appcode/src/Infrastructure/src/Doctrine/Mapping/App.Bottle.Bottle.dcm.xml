@@ -17,9 +17,13 @@
         <field name="name" column="name" type="string" nullable="false" />
         <field name="age" column="age" type="integer" nullable="true" />
         <field name="vintage" column="vintage" type="integer" nullable="true" />
+        <field name="reference" column="reference" type="string" nullable="false" />
 
         <!-- relations -->
         <many-to-one field="producer" target-entity="App\Producer\Producer" inversed-by="bottles">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
             <join-column name="producer_id" referenced-column-name="id" />
         </many-to-one>
 

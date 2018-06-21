@@ -6,7 +6,7 @@
         xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                         http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
 
-    <entity name="Domain\Price" table="price">
+    <entity name="App\User\Collection" table="collection">
 
         <!-- definition here -->
         <id name="id" type="string">
@@ -14,15 +14,19 @@
         </id>
 
         <!-- properties -->
-        <field name="amount" column="amount" type="float" nullable="false" />
-
-        <field name="created" column="created" type="datetime" nullable="false" />
-        <field name="updated" column="updated" type="datetime" nullable="false" />
+        <field name="name" column="name" type="string" nullable="false" />
 
         <!-- relations -->
-        <many-to-one field="bottle" target-entity="App\Bottle\Bottle" inversed-by="prices">
-            <join-column name="bottle_id" referenced-column-name="id" />
+        <one-to-many field="items" target-entity="App\User\Item" mapped-by="collection">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
+        </one-to-many>
+
+        <many-to-one field="user" target-entity="App\User\User" inversed-by="collections">
+            <join-column name="user_id" referenced-column-name="id" />
         </many-to-one>
+
 
     </entity>
 
