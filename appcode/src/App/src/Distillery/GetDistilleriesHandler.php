@@ -10,6 +10,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
+use Zend\Diactoros\Response\JsonResponse;
 use Zend\Expressive\Hal\HalResponseFactory;
 use Zend\Expressive\Hal\ResourceGenerator;
 
@@ -63,11 +64,13 @@ class GetDistilleriesHandler implements RequestHandlerInterface
         $distilleries->setCurrentPageNumber(1);
         $distilleries->setItemCountPerPage(10);
 
+        return new JsonResponse($distilleries->getCurrentItems(), 200);
+
         /**
          * @todo response payload factory
          */
-        $resource = $this->resourceGenerator->fromObject($distilleries, $request);
-        return $this->responseFactory->createResponse($request, $resource);
+        //$resource = $this->resourceGenerator->fromObject($distilleries, $request);
+        //return $this->responseFactory->createResponse($request, $resource);
 
     }
 }

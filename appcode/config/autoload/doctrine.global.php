@@ -6,9 +6,9 @@ return [
                 'driverClass' => \Doctrine\DBAL\Driver\PDOMySql\Driver::class,
                 'params' => [
                     'driver'   => 'pdo_mysql',
-                    'host'     => 'TmsMysql',
+                    'host'     => 'WhiskyMysql',
                     'port'     => '3306',
-                    'dbname'   => 'tms',
+                    'dbname'   => 'whisky',
                     'user'     => 'root',
                     'password' => '1',
                     'charset'  => 'UTF8',

@@ -1,6 +1,5 @@
-.idea
-composer.phar
-
+.idea/
+-composer.phar
 clover.xml
 coveralls-upload.json
 phpunit.xml

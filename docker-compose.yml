@@ -3,7 +3,7 @@ version: '2'
 services:
 
     nginx:
-        container_name: TmsNginx
+        container_name: WhiskyNginx
         build:
             context: .
             dockerfile: docker/nginx/Dockerfile
@@ -18,10 +18,10 @@ services:
         depends_on:
             - php-fpm
         links:
-            - "php-fpm:TmsPHP"
+            - "php-fpm:WhiskyPHP"
 
     php-fpm:
-        container_name: TmsPHP
+        container_name: WhiskyPHP
         build:
             context: .
             dockerfile: docker/php/Dockerfile
@@ -32,17 +32,20 @@ services:
           - beanstalkd
           - appdata
         links:
-            - "mysql:TmsMysql"
-            - "beanstalkd:TmsBeanstalkd"
+          - "mysql:WhiskyMysql"
+          - "beanstalkd:WhiskyBeanstalkd"
 
     appdata:
-        container_name: TmsApp
-        image: vasildakov/tms:latest
+        container_name: WhiskyApp
+        build:
+            context: .
+            dockerfile: docker/appdata/Dockerfile
+        #image: vasildakov/tms:latest
         volumes:
             - ./appcode:/var/www/html
 
     mysql:
-        container_name: TmsMysql
+        container_name: WhiskyMysql
         image: mysql:5.7
         restart: always
         #build:
@@ -50,20 +53,20 @@ services:
         #    dockerfile: docker/mysql/Dockerfile
         environment:
             MYSQL_ROOT_PASSWORD: '1'
+            MYSQL_DATABASE: 'whisky'
             MYSQL_USER: 'root'
             MYSQL_PASSWORD: '1'
-            MYSQL_DATABASE: 'tms'
         ports:
             - "3311:3306"
 
     redis:
-        container_name: TmsRedis
+        container_name: WhiskyRedis
         image: redis:3.2.0
         ports:
             - "6380:6379"
 
     beanstalkd:
-        container_name: TmsBeanstalkd
+        container_name: WhiskyBeanstalkd
         image: schickling/beanstalkd
         ports:
             - "11300:11300"

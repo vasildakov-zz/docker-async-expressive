@@ -71,22 +71,22 @@ class GetProducts extends AbstractRestfulHandler
         $products->setCurrentPageNumber(1);
         $products->setItemCountPerPage(10);
 
-        //$products = $paginator->getCurrentItems();
-        //var_dump($products); exit();
+        $products = $paginator->getCurrentItems();
+        var_dump($products); exit();
 
         /**
          * @todo response payload factory
          */
-        /* return new JsonResponse(
+        return new JsonResponse(
             [
                 'data'  => $paginator->getCurrentItems(),
                 'pages' => $paginator->getPages(),
             ],
             StatusCodeInterface::STATUS_OK
-        ); */
+        );
 
-        $resource = $this->resourceGenerator->fromObject($products, $request);
-        return $this->responseFactory->createResponse($request, $resource);
+        //$resource = $this->resourceGenerator->fromObject($products, $request);
+        //return $this->responseFactory->createResponse($request, $resource);
 
     }
 }

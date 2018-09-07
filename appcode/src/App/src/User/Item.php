@@ -4,6 +4,7 @@ namespace App\User;
 
 
 use App\TimeStampable;
+use DateTime;
 
 class Item
 {
@@ -16,6 +17,9 @@ class Item
     /** @var int  The buying price */
     private $price;
 
+    /** @var DateTime $acquired */
+    private $acquired;
+
     private $collection;
 
     public function __construct()
@@ -27,6 +31,7 @@ class Item
     public function setCollection($collection = null)
     {
         $this->collection = $collection;
+
         return $this;
     }
 
@@ -51,6 +56,7 @@ class Item
     public function setPrice($price)
     {
         $this->price = $price;
+
         return $this;
     }
 

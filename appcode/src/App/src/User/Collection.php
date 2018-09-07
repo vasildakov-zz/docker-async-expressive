@@ -4,6 +4,7 @@ namespace App\User;
 
 use App\TimeStampable;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection as CollectionInterface;
 use Ramsey\Uuid\Uuid;
 
 class Collection
@@ -88,7 +89,10 @@ class Collection
         $this->items->add($item);
     }
 
-    public function addItems(\Doctrine\Common\Collections\Collection $items)
+    /**
+     * @param CollectionInterface $items
+     */
+    public function addItems(CollectionInterface $items)
     {
         foreach ($items as $item) {
             $item->setCollection($this);
@@ -96,7 +100,10 @@ class Collection
         }
     }
 
-    public function removeItems(\Doctrine\Common\Collections\Collection $items)
+    /**
+     * @param CollectionInterface $items
+     */
+    public function removeItems(CollectionInterface $items)
     {
         foreach ($items as $item) {
             $item->setCollection(null);
